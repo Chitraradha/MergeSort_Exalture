@@ -9,31 +9,18 @@ class MergeArraysPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        title: Text("Merge Sort",style: TextStyle(color: Colors.white),),
+      ),
       body: Stack(
         children: [
-          ClipPath(
-            clipper: CurvedContainer(),
-            child: Container(
-              height: MediaQuery.of(context).size.height * 0.17,
-              color: Colors.green.shade700,
-            ),
-          ),
+          
           SingleChildScrollView(
             padding: const EdgeInsets.all(26.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 30),
-                Center(
-                  child: Text(
-                    'Merge Arrays',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontSize: 24,
-                    ),
-                  ),
-                ),
                 SizedBox(height: 80),
                 TextField(
                   controller: viewModel.nums1Controller,
@@ -50,12 +37,12 @@ class MergeArraysPage extends StatelessWidget {
                     labelText: 'Enter nums2 (comma separated)',
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 200),
                 Center(
                   child: ElevatedButton(
                     onPressed: viewModel.onMergeButtonPressed,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.green.shade700,
+                      backgroundColor: Color.fromARGB(255, 176, 73, 106),
                       padding:
                       EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                       shape: RoundedRectangleBorder(
